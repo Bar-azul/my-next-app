@@ -11,7 +11,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <Link className="hover:opacity-70" href="/#about">About</Link>
           <Link className="hover:opacity-70" href="/projects">Projects</Link>
-          <Link className="hover:opacity-70" href="/#contact">Contact</Link>
+          <Link className="hover:opacity-70" href="/contact">Contact</Link>
         </nav>
 
         <div className="flex items-center gap-3">
