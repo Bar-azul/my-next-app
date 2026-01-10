@@ -1,42 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const { theme, setTheme, systemTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // מונע hydration warning
   useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
-  if (!mounted) {
-    return (
-      <button
-        className="rounded border border-white/25 px-3 py-1 text-sm opacity-70"
-        aria-label="Toggle theme"
-      >
-        Theme
-      </button>
-    );
-  }
-
-  const current = theme === "system" ? systemTheme : theme;
-
-  function cycleTheme() {
-    // System -> Dark -> Light -> System
-    if (theme === "system") return setTheme("dark");
-    if (theme === "dark") return setTheme("light");
-    return setTheme("system");
-  }
+  const isDark = theme === "dark";
 
   return (
     <button
-      onClick={cycleTheme}
-      className="rounded border border-white/25 px-3 py-1 text-sm hover:border-white/60 transition"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className="flex items-center gap-2 rounded border px-3 py-1 text-sm transition
+                 border-black/20 hover:border-black/40
+                 dark:border-white/20 dark:hover:border-white/40"
       aria-label="Toggle theme"
-      title={`Theme: ${theme} (current: ${current})`}
     >
-      {theme === "system" ? "System" : theme === "dark" ? "Dark" : "Light"}
+      <span className="text-lg">
+        {isDark ? "☀️" : "🌙"}
+      </span>
+      <span>
+        {isDark ? "Light" : "Dark"}
+      </span>
     </button>
   );
 }
