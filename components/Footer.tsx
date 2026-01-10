@@ -8,9 +8,15 @@ export default function Footer() {
             <a className="hover:opacity-70" href="https://github.com/Bar-azul" target="_blank" rel="noreferrer">
               GitHub
             </a>
-            <a className="hover:opacity-70" href="mailto:bar3882@gmail.com">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=bar3882@gmail.com&su=Contact%20from%20portfolio&body=Hi%20Bar%2C%0A%0A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70"
+            >
               Email
             </a>
+
             <a className="hover:opacity-70" href="https://www.linkedin.com/in/bar-azulay-154900244/" target="_blank" rel="noreferrer">
               LinkedIn
             </a>
