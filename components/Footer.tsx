@@ -8,10 +8,10 @@ export default function Footer() {
             <a className="hover:opacity-70" href="https://github.com/Bar-azul" target="_blank" rel="noreferrer">
               GitHub
             </a>
-            <a className="hover:opacity-70" href="mailto:your@email.com">
+            <a className="hover:opacity-70" href="mailto:bar3882@gmail.com">
               Email
             </a>
-            <a className="hover:opacity-70" href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <a className="hover:opacity-70" href="https://www.linkedin.com/in/bar-azulay-154900244/" target="_blank" rel="noreferrer">
               LinkedIn
             </a>
           </div>
